@@ -3,5 +3,5 @@
          Anasayfa
     </x-slot>
 
-      aaaaaaaa
+
 </x-app-layout>

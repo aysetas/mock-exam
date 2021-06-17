@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ExamController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +23,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/panel', function () {
 })->name('dashboard');
 
 Route::group(['middleware' => ['auth','isAdmin'], 'prefix' => 'admin'], function (){
-    Route::get('deneme',function (){
-        return 'prefix başarılı';
-    });
+    Route::resource('exam' , ExamController::class );
 });
+
